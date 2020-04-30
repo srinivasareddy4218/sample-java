@@ -1,14 +1,19 @@
 pipeline {
-    agent any
-    stages {
-        stage('build') {
-            steps {
-                echo "Hello World"
-                script {
-                def test = 2+2>3? 'cool': 'not cool'
-                echo test
-                }
-            }
+  agent any
+  stages {
+  stage('Stage 1') {
+      steps {
+        script {
+          echo 'Stage 1'
         }
+      }
     }
+  stage('Stage 2') {
+      steps {
+        script {
+          echo 'Stage 2'
+        }
+      }
+    }
+  }
 }
