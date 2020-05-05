@@ -2,12 +2,10 @@ pipeline {
    agent any
    environment {
    PATH="C:/Users/sarikatla/Downloads/apache-maven-3.6.3/bin:$PATH" }
-   }
    stages{
          stage("Git checkout") {
          steps {
                git credentials Id:'git hub',url:'https://github.com/srinivasareddy4218/sample-java.git' }
-               }
           }
            stage("MAven Build") {
          steps {
