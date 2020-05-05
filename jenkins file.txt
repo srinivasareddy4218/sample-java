@@ -7,6 +7,7 @@ pipeline {
          steps {
                git credentials Id:'git hub',url:'https://github.com/srinivasareddy4218/sample-java.git' 
                }
+            }
            stage("Maven Build") {
          steps {
                sh."mvn cleam package"
