@@ -6,12 +6,12 @@ pipeline {
    stages{
          stage("Git checkout") {
          steps {
-               git credentials Id: 'git hub',url 'https://github.com/srinivasareddy4218/sample-java.git' }
+               git credentialsId: 'git hub',url 'https://github.com/srinivasareddy4218/sample-java.git' 
                }
              }
            stage("Maven Build") {
          steps {
-               sh."mvn cleam package"
+               sh."mvn clean package"
                }
           
           }
